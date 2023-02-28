@@ -1,19 +1,20 @@
-USE [appc_admin]
+USE [V3_admin]
 GO
-/****** Object:  StoredProcedure [dbo].[nixxiscustom_GetAgentAssignedToTeam2]    Script Date: 02/24/23 14:56:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
-GO Create   PROCEDURE [dbo].[nixxiscustom_GetAgentAssignedToTeam]
+GO
+CREATE OR ALTER PROCEDURE dbo.nixxiscustom_GetAgentsAssignedToTeam
 @TeamId CHAR(32)
-AS
-BEGIN 
---
-SET NOCOUNT ON;
---
+AS 
+BEGIN
+  -- 
+  SET NOCOUNT ON;
+  -- Query :
 SELECT
-*
-FROM appc_Admin.dbo.AgentsTeams at2 (NOLOCK)
-WHERE at2.TeamId = @TeamId
-AND at2.BaseLevel > 0
+ at2.AgentId
+ FROM V3_admin.dbo.AgentsTeams at2 (NOLOCK)
+ WHERE at2.TeamId = @TeamId
+ AND at2.BaseLevel > 0
 END
+GO
