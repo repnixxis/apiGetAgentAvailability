@@ -1,5 +1,5 @@
 {
-	"appURI":"http://10.67.0.225:8088",
-	"dbsource":"admin",
-	"spexec":"nixxiscustom_GetAgentAssignedToTeam2"
+	"appURI":"http://YOUR_IP:8088",
+	"dbsource":"admindb",
+	"spexec":"nixxiscustom_GetAgentsAssignedToTeam"
 }
