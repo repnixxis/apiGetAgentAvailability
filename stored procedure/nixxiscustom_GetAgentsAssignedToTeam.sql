@@ -12,7 +12,7 @@ BEGIN
   SET NOCOUNT ON;
   -- Query :
 SELECT
- at2.AgentId
+*
  FROM V3_admin.dbo.AgentsTeams at2 (NOLOCK)
  WHERE at2.TeamId = @TeamId
  AND at2.BaseLevel > 0
