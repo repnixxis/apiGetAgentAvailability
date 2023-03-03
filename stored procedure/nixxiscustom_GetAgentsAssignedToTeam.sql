@@ -1,4 +1,4 @@
-USE [V3_admin]
+USE [Name_admin] --- adapt DB name
 GO
 SET ANSI_NULLS ON
 GO
@@ -13,8 +13,12 @@ BEGIN
   -- Query :
 SELECT
 *
- FROM V3_admin.dbo.AgentsTeams at2 (NOLOCK)
+ FROM Name_admin.dbo.AgentsTeams at2 (NOLOCK) --- adapt DB name
  WHERE at2.TeamId = @TeamId
  AND at2.BaseLevel > 0
 END
 GO
+
+GRANT EXECUTE ON [dbo].[nixxiscustom_GetAgentsAssignedToTeam] TO [NixxisAdminRole] AS [dbo]
+GRANT EXECUTE ON [dbo].[nixxiscustom_GetAgentsAssignedToTeam] TO [NixxisReportingRole] AS [dbo]
+GRANT EXECUTE ON [dbo].[nixxiscustom_GetAgentsAssignedToTeam] TO [NixxisUserRole] AS [dbo]
