@@ -1,10 +1,10 @@
-USE [Name_admin] --- adapt DB name
+USE [Tenant_admin] --- adapt DB name
 GO
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE OR ALTER PROCEDURE dbo.nixxiscustom_GetAgentsAssignedToTeam
+CREATE OR ALTER PROCEDURE [dbo].[nixxiscustom_GetAgentsAssignedToTeam]
 @TeamId CHAR(32)
 AS 
 BEGIN
@@ -13,7 +13,7 @@ BEGIN
   -- Query :
 SELECT
 *
- FROM Name_admin.dbo.AgentsTeams at2 (NOLOCK) --- adapt DB name
+ FROM [Tenant_admin].[dbo].[nixxiscustom_GetAgentsAssignedToTeam] at2 (NOLOCK) --- adapt DB name
  WHERE at2.TeamId = @TeamId
  AND at2.BaseLevel > 0
 END
