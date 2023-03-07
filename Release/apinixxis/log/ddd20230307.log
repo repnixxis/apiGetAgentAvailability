@@ -1,0 +1,14 @@
+2023-03-07 05:59:39.831 +01:00 [INF]  Protocol : HTTP/1.1
+2023-03-07 05:59:39.876 +01:00 [INF]  Path : /available/895c7aa9f0f94875a641bd2ef28b1bb8
+2023-03-07 05:59:39.877 +01:00 [INF]  Method : GET
+2023-03-07 05:59:40.075 +01:00 [INF]  Response status : 200
+2023-03-07 05:59:40.078 +01:00 [INF]  IP Address : fe80::3485:d05b:73e:efe8%11
+2023-03-07 05:59:40.081 +01:00 [INF]  Response status : 200
+2023-03-07 05:59:40.081 +01:00 [INF]  IP Address : fe80::3485:d05b:73e:efe8%11
+2023-03-07 05:59:58.973 +01:00 [INF]  Protocol : HTTP/1.1
+2023-03-07 05:59:58.974 +01:00 [INF]  Path : /available/895c7aa9f0f94875a641bd2ef28b1bb8
+2023-03-07 05:59:58.975 +01:00 [INF]  Method : GET
+2023-03-07 05:59:58.987 +01:00 [INF]  Response status : 200
+2023-03-07 05:59:58.988 +01:00 [INF]  IP Address : fe80::3485:d05b:73e:efe8%11
+2023-03-07 05:59:58.989 +01:00 [INF]  Response status : 200
+2023-03-07 05:59:58.990 +01:00 [INF]  IP Address : fe80::3485:d05b:73e:efe8%11
