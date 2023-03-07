@@ -1,19 +1,24 @@
-USE [appc_admin]
+USE [Tenant_admin] --- adapt DB name
 GO
-/****** Object:  StoredProcedure [dbo].[nixxiscustom_GetAgentAssignedToTeam2]    Script Date: 02/24/23 14:56:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
-GO Create   PROCEDURE [dbo].[nixxiscustom_GetAgentAssignedToTeam]
+GO
+CREATE OR ALTER PROCEDURE [dbo].[nixxiscustom_GetAgentsAssignedToTeam]
 @TeamId CHAR(32)
-AS
-BEGIN 
---
-SET NOCOUNT ON;
---
+AS 
+BEGIN
+  -- 
+  SET NOCOUNT ON;
+  -- Query :
 SELECT
 *
-FROM appc_Admin.dbo.AgentsTeams at2 (NOLOCK)
-WHERE at2.TeamId = @TeamId
-AND at2.BaseLevel > 0
+ FROM [Tenant_admin].[dbo].[nixxiscustom_GetAgentsAssignedToTeam] at2 (NOLOCK) --- adapt DB name
+ WHERE at2.TeamId = @TeamId
+ AND at2.BaseLevel > 0
 END
+GO
+
+GRANT EXECUTE ON [dbo].[nixxiscustom_GetAgentsAssignedToTeam] TO [NixxisAdminRole] AS [dbo]
+GRANT EXECUTE ON [dbo].[nixxiscustom_GetAgentsAssignedToTeam] TO [NixxisReportingRole] AS [dbo]
+GRANT EXECUTE ON [dbo].[nixxiscustom_GetAgentsAssignedToTeam] TO [NixxisUserRole] AS [dbo]
